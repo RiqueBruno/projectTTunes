@@ -6,11 +6,11 @@ import Content from './components/Content/Content';
 class App extends React.Component {
   render() {
     return (
-      <body>
+      <main>
         <Header />
         <Sidebar />
         <Content />
-      </body>
+      </main>
     );
   }
 }
