@@ -1,34 +1,32 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+
 import PropTypes from 'prop-types';
 
 class AlbumCard extends Component {
+  componentDidMount() {
+    AlbumCard.propTypes = {
+      artistName: PropTypes.string.isRequired,
+      artworkUrl100: PropTypes.string.isRequired,
+      collectionName: PropTypes.string.isRequired,
+    };
+  }
+
   render() {
-    const { artistName, artworkUrl100, collectionName, collectionId } = this.props;
+    const { artistName, artworkUrl100, collectionName } = this.props;
     return (
       <div>
         <div>
-          <img src={ artworkUrl100 } alt="Foto do album" />
+          <img
+            src={ artworkUrl100 }
+            alt={ `Capa do album ${collectionName} de ${artistName}` }
+          />
         </div>
-        <p>{ collectionName }</p>
-        <p>{ artistName }</p>
-        <Link
-          to={ `/album/${collectionId}` }
-          className="textLink"
-          data-testid={ `link-to-album-${collectionId}` }
-        >
-          Saiba Mais
-        </Link>
+        <p data-testid="album-name">{ collectionName }</p>
+        <p data-testid="artist-name">{ artistName }</p>
+
       </div>
     );
   }
 }
 
 export default AlbumCard;
-
-AlbumCard.propTypes = {
-  artistName: PropTypes.string.isRequired,
-  artworkUrl100: PropTypes.string.isRequired,
-  collectionName: PropTypes.string.isRequired,
-  collectionId: PropTypes.number.isRequired,
-};

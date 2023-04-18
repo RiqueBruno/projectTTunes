@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import searchAlbumsAPI from '../../services/searchAlbumsAPI';
 import AlbumCard from '../../components/AlbumCard/AlbumCard';
+import getMusics from '../../services/musicsAPI';
 
 class Search extends Component {
   state = {
@@ -41,7 +43,8 @@ class Search extends Component {
     });
     const albuns = await searchAlbumsAPI(inputText);
     const hasAlbum = albuns.length === 0;
-    console.log(hasAlbum);
+    const aa = await getMusics('1440818588');
+    console.log(aa);
     if (hasAlbum) {
       this.setState({
         inputText: '',
@@ -86,7 +89,7 @@ class Search extends Component {
                 </button>
               </div>
             </header>
-            <body>
+            <article>
               <div>
                 {
                   albuns.length > 0 ? (
@@ -95,20 +98,31 @@ class Search extends Component {
                       <div>
                         {albuns.map(
                           (album) => (
-                            <AlbumCard
-                              key={ album.collectionId }
-                              artistName={ album.artistName }
-                              artworkUrl100={ album.artworkUrl100 }
-                              collectionName={ album.collectionName }
-                              collectionId={ album.collectionId }
-                            />),
+                            <>
+                              <AlbumCard
+                                key={ album.collectionId }
+                                artistName={ album.artistName }
+                                artworkUrl100={ album.artworkUrl100 }
+                                collectionName={ album.collectionName }
+                                collectionId={ album.collectionId }
+                              />
+                              <Link
+                                key={ album.artworkUrl100 }
+                                to={ `/album/${album.collectionId}` }
+                                className="textLink"
+                                data-testid={ `link-to-album-${album.collectionId}` }
+                              >
+                                Saiba Mais
+                              </Link>
+                            </>),
                         )}
+
                       </div>
                     </>
                   ) : (<p>{hasAlbuns}</p>)
                 }
               </div>
-            </body>
+            </article>
           </div>
         )}
       </div>
