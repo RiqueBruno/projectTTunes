@@ -26,10 +26,10 @@ class MusicCard extends Component {
   handleChange = async () => {
     const { trackId } = this.props;
     const { checked } = this.state;
-    const getMusic = await getMusics(trackId);
     this.setState({
       loading: true,
     });
+    const getMusic = await getMusics(trackId);
     if (checked === true) {
       await removeSong(getMusic[0]);
       this.setState({
