@@ -43,7 +43,7 @@ class Search extends Component {
     });
     const albuns = await searchAlbumsAPI(inputText);
     const hasAlbum = albuns.length === 0;
-    const aa = await getMusics('1440818588');
+    const aa = await getMusics('1640278305');
     console.log(aa);
     if (hasAlbum) {
       this.setState({

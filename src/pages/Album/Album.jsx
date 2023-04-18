@@ -34,7 +34,7 @@ class Album extends Component {
         <header>
           <Header />
         </header>
-        <body>
+        <article>
           <div>
             <AlbumCard
               data-testid="artist-name"
@@ -46,15 +46,16 @@ class Album extends Component {
           <div>
             <ul>
               {collection.slice(1).map(
-                ({ trackName, previewUrl }) => (<MusicCard
+                ({ trackName, previewUrl, trackId }) => (<MusicCard
                   key={ Math.random() }
                   trackName={ trackName }
                   previewUrl={ previewUrl }
+                  trackId={ trackId }
                 />),
               )}
             </ul>
           </div>
-        </body>
+        </article>
       </main>
     );
   }
