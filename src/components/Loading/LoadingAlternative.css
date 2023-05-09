@@ -1,0 +1,44 @@
+.BGA {
+  margin-top: 49px;
+  position: absolute;
+  right: 370px;
+}
+
+.loadingA {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.loadingA p {
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+}
+
+.circulo-dentroA {
+  background: #f9d1ff;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px rgba(172, 9, 221, 0.4);
+  height: 30px;
+  position: absolute;
+  width: 30px;
+  z-index: 1;
+}
+
+.circuloA {
+  animation: spin 3s linear infinite;
+  background: linear-gradient(0deg, #9300aa, #8a099e94, #bb1ed35b, #d040e617);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0.5em 0 var(--cor) , 0 0 0.5em 0 var(--cor);
+  height: 50px;
+  width: 50px;
+  z-index: 0;
+}
+
+@keyframes spin {
+
+  to { transform: rotate(360deg); }
+
+}

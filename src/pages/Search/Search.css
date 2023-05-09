@@ -1,0 +1,151 @@
+.page-search {
+  background-color: #ff8dfa;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.containers {
+  width: 100%;
+}
+
+.headerSearch {
+  align-items: center;
+  background: linear-gradient(123.66deg, #7d0555 12.08%, black 86.52%);
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  width: 100%;
+}
+
+.searchArea {
+  height: 40%;
+  width: 50%;
+}
+
+.searchArea input {
+  background: rgba(4, 20, 1, 0.22);
+  border: none;
+  border-radius: 23px;
+  height: 100%;
+  padding: 0 20px;
+  width: 70%;
+}
+
+.searchArea input::placeholder {
+  color: white;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.searchArea button {
+  background: #7d0555;
+  border-radius: 23px;
+  color: white;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 100%;
+  letter-spacing: 0.03em;
+  line-height: 14px;
+  margin-left: 20px;
+  text-transform: uppercase;
+  width: 20%;
+}
+
+.searchArea button:hover {
+  background: #9c0269;
+  cursor: pointer;
+  scale: 110%;
+}
+
+.articleSearch {
+  background: linear-gradient(180deg, white 9.9%, #ff8dfa 100%);
+}
+
+.resultArea {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 50px;
+}
+
+.p {
+  color: #3c0061;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: center;
+}
+
+.albunsOnSearch {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+@media screen and ( max-width : 450px ) {
+
+  .searchArea {
+    align-items: center;
+    display: flex;
+    height: 40%;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .page-search {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .searchArea input {
+    height: 80%;
+    width: 40%;
+  }
+
+  .searchArea input::placeholder {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .searchArea button {
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    height: 70%;
+    width: 30%;
+  }
+
+  .searchArea button:hover {
+    background: #9c0269;
+    cursor: pointer;
+    scale: 110%;
+  }
+}
+
+@media screen and ( max-width : 950px ) {
+
+  .page-search {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .searchArea {
+    align-items: center;
+    display: flex;
+    height: 40%;
+    justify-content: center;
+    width: 80%;
+  }
+}

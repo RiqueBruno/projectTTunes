@@ -1,0 +1,141 @@
+.Album {
+  background: #ff8dfa;
+  color: rgb(187, 129, 241);
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+}
+
+.article {
+  background: linear-gradient(180deg, #1d0010 9.9%, #770041 100%);
+  display: flex;
+  flex-direction: row;
+  padding-top: 100px;
+  width: 100%;
+}
+
+.cardAreaAlbumImg {
+  border-right: 1px solid rgb(187, 129, 241);
+  width: 50%;
+  z-index: 1;
+}
+
+.imgAreaAlbum {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.imgAreaAlbum img {
+  border-radius: 4px;
+  box-shadow: 0 0 10px 5px rgb(233, 0, 194);
+}
+
+
+.cardAreaAlbumInfo {
+  margin: 0 20px 20px 0;
+  overflow: auto;
+  overflow-x: hidden;
+  width: 100%;
+  z-index: 1;
+}
+
+.cardAreaAlbumInfo::-webkit-scrollbar {
+  width: 12px;
+}
+
+.cardAreaAlbumInfo::-webkit-scrollbar-track {
+  background: rgba(240, 0, 180, 0.575);
+  border-radius: 20px;
+}
+
+.cardAreaAlbumInfo::-webkit-scrollbar-thumb {
+  background-color: rgb(100, 3, 95);
+  border-radius: 20px;
+}
+
+
+.textAreaAlbum {
+  align-items: center;
+  color: rgb(187, 129, 241);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.listMusicsArea {
+  list-style: none;
+  width: 90%;
+}
+
+.listMusicsArea p {
+  color: rgb(187, 129, 241);
+}
+
+.heartBG {
+  background-image: url('../../Imagens/Login/BGH.gif');
+  height: 600px;
+  opacity: 0.05;
+  position: absolute;
+  width: 1360px;
+  z-index: 0;
+}
+
+@media screen and ( max-width : 450px ) {
+
+  .Album {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .article {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+@media screen and ( max-width : 950px ) {
+
+  .Album {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .article {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  .cardAreaAlbumImg {
+    align-items: center;
+    border: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .imgAreaAlbum {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    padding: 20px;
+  }
+}

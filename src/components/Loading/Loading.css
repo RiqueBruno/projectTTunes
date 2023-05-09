@@ -1,0 +1,50 @@
+:root {
+
+  --cor: #ee3bf4;
+
+}
+
+.BG {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.loading {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.loading p {
+  color: #9300aa;
+  position: absolute;
+  z-index: 2;
+}
+
+.circulo-dentro {
+  background: #f9d1ff;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px rgba(172, 9, 221, 0.4);
+  height: 120px;
+  position: absolute;
+  width: 120px;
+  z-index: 1;
+}
+
+.circulo {
+  animation: spin 3s linear infinite;
+  background: linear-gradient(0deg, #9300aa, #8a099e94, #bb1ed35b, #d040e617);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0.5em 0 var(--cor) , 0 0 0.5em 0 var(--cor);
+  height: 160px;
+  width: 160px;
+  z-index: 0;
+}
+
+@keyframes spin {
+
+  to { transform: rotate(360deg); }
+
+}

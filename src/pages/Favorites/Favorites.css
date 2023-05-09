@@ -1,0 +1,88 @@
+.mainFav {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.articleFav {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.FavHeader {
+  align-items: center;
+  background: linear-gradient(-180deg, #7d0555 12.08%, rgb(43, 0, 24) 86.52%);
+  color: white;
+  display: flex;
+  font-size: 30px;
+  height: 200px;
+  justify-content: center;
+  width: 100%;
+}
+
+.FavBody {
+  align-items: center;
+  background: linear-gradient(0deg, #70024f 80%, rgb(43, 0, 24) 100%);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.FavBody ul {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  list-style: none;
+  overflow: auto;
+  overflow-x: hidden;
+  padding-top: 20px;
+  width: 80%;
+}
+
+.FavBody ul li p {
+  color: pink;
+}
+
+.FavBody ul::-webkit-scrollbar {
+  width: 12px;
+}
+
+.FavBody ul::-webkit-scrollbar-track {
+  background: rgba(44, 0, 33, 0.575);
+  border-radius: 20px;
+}
+
+.FavBody ul::-webkit-scrollbar-thumb {
+  background-color: rgb(201, 5, 191);
+  border-radius: 20px;
+}
+
+.FavBody ul li {
+  width: 90%;
+}
+
+@media screen and ( max-width : 450px ) {
+
+  .mainFav {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+@media screen and ( max-width : 950px ) {
+
+  .mainFav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+  }
+}

@@ -1,0 +1,329 @@
+.divHeader {
+  background: linear-gradient(180deg, #e3bfff 29.69%, #fd89ff 100%);
+  box-shadow: 0 0 2px 2px rgb(59, 1, 45);
+  height: 100%;
+  width: 15%;
+  z-index: 3000;
+}
+
+.UserOrLoading {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.imgLogo {
+  height: 150px;
+  width: 150px;
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+}
+
+.logo:hover {
+  animation: logoAnimation 2s ease 0s infinite normal forwards;
+}
+
+.DivLinks {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: space-around;
+  margin-bottom: 200px;
+  width: 100%;
+}
+
+.link {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+.link:hover {
+  background-color: #fd89ff;
+  border-radius: 0 50px 50px 0;
+  box-shadow: 0 0 2px 4px rgb(100, 4, 95);
+  padding: 5px;
+  scale: 105%;
+}
+
+.link img {
+  margin-right: 10px;
+}
+
+.textLink {
+  color: #3f0141;
+  text-decoration: none;
+}
+
+.loadings {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.loadings p {
+  color: #9300aa;
+  z-index: 2;
+}
+
+.circulo-dentros {
+  background: #f9d1ff;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px rgba(172, 9, 221, 0.4);
+  height: 60px;
+  position: absolute;
+  width: 60px;
+  z-index: 1;
+}
+
+.circulos {
+  animation: spin 3s linear infinite;
+  background: linear-gradient(0deg, #9300aa, #8a099e94, #bb1ed35b, #d040e617);
+  border-radius: 50%;
+
+  /* box-shadow: inset 0 0 0.5em 0 var(--cor), 0 0 0.5em 0 var(--cor); */
+  height: 80px;
+  width: 80px;
+  z-index: 0;
+}
+
+.perfils {
+  align-items: center;
+  bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+}
+
+.nameUserHeader {
+  color: #3f0141;
+}
+
+.imgftHeader {
+  border: 2px solid rgb(67, 2, 73);
+  border-radius: 50%;
+  height: 50px;
+  margin-right: 20px;
+  width: 50px;
+}
+
+.imgftHeader img {
+  background-image: url('../../Imagens/Login/baseImage.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and ( max-width : 450px ) {
+
+  .circulo-dentros {
+    height: 30px;
+    width: 30px;
+  }
+
+  .circulos {
+    height: 40px;
+    width: 40px;
+  }
+
+  .divHeader {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .UserOrLoading {
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .imgLogo {
+    display: none;
+  }
+
+  .DivLinks {
+    align-items: center;
+    flex-direction: row;
+    font-size: 11px;
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .link:hover {
+    background-color: transparent;
+    border-radius: none;
+    box-shadow: none;
+    padding: 0;
+    scale: 100%;
+  }
+
+  .link img {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .textLink {
+    color: #3f0141;
+    text-decoration: none;
+  }
+
+  .perfils {
+    flex-direction: row;
+    width: 50%;
+  }
+
+  .nameUserHeader {
+    font-size: 11px;
+  }
+
+  .imgftHeader {
+    border: 1px solid rgb(67, 2, 73);
+    height: 30px;
+    width: 30px;
+  }
+}
+
+@media screen and ( max-width : 950px ) {
+
+  .circulo-dentros {
+    height: 30px;
+    width: 30px;
+  }
+
+  .circulos {
+    height: 40px;
+    width: 40px;
+  }
+
+  .divHeader {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .UserOrLoading {
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .imgLogo {
+    display: none;
+  }
+
+  .DivLinks {
+    align-items: center;
+    flex-direction: row;
+    font-size: 11px;
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .link:hover {
+    background-color: transparent;
+    border-radius: none;
+    box-shadow: none;
+    padding: 0;
+    scale: 100%;
+  }
+
+  .link img {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .textLink {
+    color: #3f0141;
+    text-decoration: none;
+  }
+
+  .perfils {
+    flex-direction: row;
+    width: 50%;
+  }
+
+  .nameUserHeader {
+    font-size: 11px;
+  }
+
+  .imgftHeader {
+    border: 1px solid rgb(67, 2, 73);
+    height: 30px;
+    width: 30px;
+  }
+}
+
+@keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+@keyframes logoAnimation {
+
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+
+  10% {
+    transform: rotate(8deg);
+  }
+
+  20% {
+    transform: rotate(-10deg);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  30% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  70% {
+    transform: rotate(10deg);
+  }
+
+  80% {
+    transform: rotate(-8deg);
+  }
+
+  90% {
+    transform: rotate(8deg);
+  }
+}

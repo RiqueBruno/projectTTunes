@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './AlbumCard.css';
 
 import PropTypes from 'prop-types';
 
@@ -14,16 +15,18 @@ class AlbumCard extends Component {
   render() {
     const { artistName, artworkUrl100, collectionName } = this.props;
     return (
-      <div>
-        <div>
+      <div className="AlbumCard">
+        <div className="imgAlbumCardArea">
           <img
-            src={ artworkUrl100 }
+            className="imgAlbumCard"
+            src={ artworkUrl100.replaceAll('100x100bb', '150x150bb') }
             alt={ `Capa do album ${collectionName} de ${artistName}` }
           />
         </div>
-        <p data-testid="album-name">{ collectionName }</p>
-        <p data-testid="artist-name">{ artistName }</p>
-
+        <div className="textAlbumCardArea">
+          <p data-testid="album-name" className="AlbumCardName">{ collectionName }</p>
+          <p data-testid="artist-name" className="ArtistName">{ artistName }</p>
+        </div>
       </div>
     );
   }

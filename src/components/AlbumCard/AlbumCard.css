@@ -1,0 +1,51 @@
+.AlbumCard {
+  align-items: center;
+  background-color: rgba(165, 42, 42, 0.171);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content: center;
+  margin: 10px;
+  width: 250px;
+}
+
+.imgAlbumCardArea {
+  align-items: center;
+  display: flex;
+  height: 60%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.textAlbumCardArea {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  justify-content: left;
+  width: 80%;
+}
+
+.AlbumCardName {
+  font-size: 60%;
+  height: 60%;
+  margin: 10px 10px 0;
+  text-align: left;
+  width: 50%;
+}
+
+.ArtistName {
+  font-size: 50%;
+  height: 20%;
+  margin: 0 10px 10px;
+  text-align: left;
+  width: 50%;
+}
+
+.AlbumCard:hover {
+  background-color: rgb(117, 0, 133);
+  box-shadow: 0 0 15px 2px rgba(126, 0, 115, 0.699);
+  color: white;
+  scale: 150%;
+}

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Header from '../../components/Header/Header';
-import AlbumCard from '../../components/AlbumCard/AlbumCard';
 import getMusics from '../../services/musicsAPI';
 import MusicCard from '../../components/MusicCard/MusicCard';
+import './Album.css';
 
 class Album extends Component {
   state = {
@@ -30,28 +30,35 @@ class Album extends Component {
   render() {
     const { artistName, artworkUrl100, collectionName, collection } = this.state;
     return (
-      <main data-testid="page-album">
-        <header>
-          <Header />
-        </header>
-        <article>
-          <div>
-            <AlbumCard
-              data-testid="artist-name"
-              artistName={ artistName }
-              artworkUrl100={ artworkUrl100 }
-              collectionName={ collectionName }
-            />
+      <main data-testid="page-album" className="Album">
+        <Header />
+        <article className="article">
+          <div className="heartBG" />
+          <div className="cardAreaAlbumImg">
+            <div className="imgAreaAlbum">
+              <img src={ artworkUrl100.replaceAll('100x100bb', '400x400bb') } alt="" />
+            </div>
+            <div className="textAreaAlbum">
+              <h3 data-testid="album-name">
+                { collectionName }
+              </h3>
+              <h4 data-testid="artist-name">
+                { artistName }
+              </h4>
+            </div>
           </div>
-          <div>
-            <ul>
+          <div className="cardAreaAlbumInfo">
+            <ul className="listMusicsArea">
               {collection.slice(1).map(
-                ({ trackName, previewUrl, trackId }) => (<MusicCard
-                  key={ Math.random() }
-                  trackName={ trackName }
-                  previewUrl={ previewUrl }
-                  trackId={ trackId }
-                />),
+                ({ trackName, previewUrl, trackId }) => (
+                  <li key={ Math.random() } className="prevMusicArea">
+                    <MusicCard
+                      key={ Math.random() }
+                      trackName={ trackName }
+                      previewUrl={ previewUrl }
+                      trackId={ trackId }
+                    />
+                  </li>),
               )}
             </ul>
           </div>
