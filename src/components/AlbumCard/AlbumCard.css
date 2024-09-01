@@ -1,6 +1,6 @@
 .AlbumCard {
   align-items: center;
-  background-color: rgba(165, 42, 42, 0.171);
+  background: linear-gradient(#a52a2a2c 50%, #ad219a8b 100%);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -32,20 +32,21 @@
   height: 60%;
   margin: 10px 10px 0;
   text-align: left;
-  width: 50%;
+  width: 100%;
 }
 
 .ArtistName {
-  font-size: 50%;
+  font-size: 10px;
   height: 20%;
   margin: 0 10px 10px;
   text-align: left;
-  width: 50%;
+  width: 100%;
 }
 
 .AlbumCard:hover {
-  background-color: rgb(117, 0, 133);
-  box-shadow: 0 0 15px 2px rgba(126, 0, 115, 0.699);
+  background: linear-gradient(#ad219a8b 50%, #a52a2a2c 100%);
+  box-shadow: 0 0 10px 2px rgba(126, 0, 115, 0.699);
   color: white;
-  scale: 150%;
+  scale: 104%;
+  transition: 500ms;
 }

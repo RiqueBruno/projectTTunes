@@ -15,7 +15,7 @@ class AlbumCard extends Component {
   render() {
     const { artistName, artworkUrl100, collectionName } = this.props;
     return (
-      <div className="AlbumCard">
+      <article className="AlbumCard">
         <div className="imgAlbumCardArea">
           <img
             className="imgAlbumCard"
@@ -27,7 +27,7 @@ class AlbumCard extends Component {
           <p data-testid="album-name" className="AlbumCardName">{ collectionName }</p>
           <p data-testid="artist-name" className="ArtistName">{ artistName }</p>
         </div>
-      </div>
+      </article>
     );
   }
 }
