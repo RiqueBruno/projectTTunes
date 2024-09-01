@@ -53,7 +53,6 @@
 
 .btnProf {
   background: linear-gradient(to bottom, #ffabfc 5%, #cc4fa0 100%);
-  background-color: #ffabfc;
   border: 1px solid #440141;
   border-radius: 15px;
   bottom: 100px;
@@ -71,7 +70,6 @@
 
 .btnProf:hover {
   background: linear-gradient(to bottom, #cc4fa0 5%, #ffabfc 100%);
-  background-color: #cc4fa0;
 }
 
 .descriArea {
@@ -100,7 +98,7 @@
   border-radius: 20px;
 }
 
-@media screen and ( max-width : 450px ) {
+@media screen and ( max-width : 600px ) {
 
   .PF {
     display: flex;
@@ -123,13 +121,15 @@
   }
 
   .btnProf {
+    align-items: center;
+    display: flex;
     font-size: 11px;
     height: 15px;
+    justify-content: center;
     left: 20px;
     position: absolute;
-    text-align: center;
     top: 100px;
-    width: 40px;
+    width: 80px;
   }
 }
 

@@ -18,11 +18,11 @@ class Profile extends Component {
     const { User } = this.state;
     const { name, image, email, description } = User;
     return (
-      <div data-testid="page-profile" className="PF">
+      <main data-testid="page-profile" className="PF">
         <Header />
         <div className="mainPf">
           <div className="headerPF" />
-          <div className="perfil">
+          <article className="perfil">
             <div className="imgProf">
               <img src={ image } alt="" className="imgimg" />
             </div>
@@ -35,11 +35,11 @@ class Profile extends Component {
               <p className="descriArea">{ description }</p>
             </div>
             <Link to="/profile/edit">
-              <p className="btnProf">Editar</p>
+              <button className="btnProf">Editar</button>
             </Link>
-          </div>
+          </article>
         </div>
-      </div>
+      </main>
     );
   }
 }
