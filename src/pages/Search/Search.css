@@ -14,14 +14,17 @@
   align-items: center;
   background: linear-gradient(123.66deg, #7d0555 12.08%, black 86.52%);
   display: flex;
-  height: 200px;
+  height: 100px;
   justify-content: center;
   width: 100%;
 }
 
 .searchArea {
   height: 40%;
-  width: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .searchArea input {
@@ -30,7 +33,7 @@
   border-radius: 23px;
   height: 100%;
   padding: 0 20px;
-  width: 70%;
+  width: 40%;
 }
 
 .searchArea input::placeholder {
@@ -97,9 +100,13 @@
   .searchArea {
     align-items: center;
     display: flex;
-    height: 40%;
+    height: 20%;
     justify-content: center;
     width: 100%;
+  }
+  .articleSearch,
+  .resultArea {
+    height: 100vh;
   }
 
   .page-search {

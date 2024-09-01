@@ -78,7 +78,7 @@ input:focus {
   scale: 100%;
 }
 
-@media screen and ( max-width : 450px ) {
+@media screen and ( max-width : 600px ) {
 
   .imgBG {
     background-image: none;

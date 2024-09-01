@@ -43,7 +43,7 @@ class Login extends Component {
   render() {
     const { button, isLoading } = this.state;
     return (
-      <div data-testid="page-login" className="BG">
+      <main data-testid="page-login" className="BG">
         <div className="imgBG" />
         { isLoading ? (<Loading />) : (
           <section className="CenterPart">
@@ -70,7 +70,7 @@ class Login extends Component {
             </button>
           </section>
         )}
-      </div>
+      </main>
     );
   }
 }
