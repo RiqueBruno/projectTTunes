@@ -73,6 +73,7 @@ class ProfileEdit extends Component {
                 className="urlImg"
                 name="image"
                 id="inputs"
+                placeholder="Image URL"
               />
               <p id="p" name="input" />
               <img
