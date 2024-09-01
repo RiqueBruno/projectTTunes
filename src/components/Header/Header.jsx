@@ -26,12 +26,12 @@ class Header extends Component {
   render() {
     const { isLoading, nameUser, image } = this.state;
     return (
-      <div data-testid="header-component" className="divHeader">
-        <header className="UserOrLoading" data-testid="header-user-name">
+      <header data-testid="header-component" className="divHeader">
+        <div className="UserOrLoading" data-testid="header-user-name">
           <div className="imgLogo">
             <img src={ logo } alt="" className="logo" />
           </div>
-          <div className="DivLinks">
+          <nav className="DivLinks">
             <div className="link">
               <img src={ Pesquisar } alt="" className="icon" />
               <Link
@@ -62,7 +62,7 @@ class Header extends Component {
                 Perfil
               </Link>
             </div>
-          </div>
+          </nav>
           {isLoading ? (
             <div className="loadings">
               <div className="circulo-dentros" />
@@ -72,13 +72,13 @@ class Header extends Component {
           ) : (
             <div className="perfils">
               <div className="imgftHeader">
-                <img src={ image } alt="" />
+                <img src={ image } alt="foto" />
               </div>
               <p className="nameUserHeader">{nameUser}</p>
             </div>
           )}
-        </header>
-      </div>
+        </div>
+      </header>
     );
   }
 }
