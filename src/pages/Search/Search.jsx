@@ -67,7 +67,7 @@ class Search extends Component {
   render() {
     const { button, isLoading, artist, albuns, hasAlbuns } = this.state;
     return (
-      <div data-testid="page-search" className="page-search">
+      <main data-testid="page-search" className="page-search">
         <Header />
         {isLoading ? (<p>Carregando...</p>) : (
           <div className="containers">
@@ -94,7 +94,7 @@ class Search extends Component {
               <div className="resultArea">
                 {
                   albuns.length > 0 ? (
-                    <>
+                    <section>
                       <p className="p">{`Resultado de álbuns de: ${artist} `}</p>
                       <div className="albunsOnSearch">
                         {albuns.map(
@@ -118,14 +118,14 @@ class Search extends Component {
                         )}
 
                       </div>
-                    </>
+                    </section>
                   ) : (<p>{hasAlbuns}</p>)
                 }
               </div>
             </article>
           </div>
         )}
-      </div>
+      </main>
     );
   }
 }
