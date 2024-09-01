@@ -49,7 +49,7 @@ class ProfileEdit extends Component {
     const { name, email, description } = User;
     User.image = image;
     return (
-      <div data-testid="page-profile-edit" className="PFE">
+      <main data-testid="page-profile-edit" className="PFE">
         <Header />
         <div className="mainPfE">
           <div className="headerPFE" />
@@ -63,7 +63,7 @@ class ProfileEdit extends Component {
 
             </button>
           </Link>
-          <div className="perfilE">
+          <article className="perfilE">
             <label className="imgProfE" htmlFor="inputs">
               <input type="checkbox" id="inputs" className="check" />
               <input
@@ -111,9 +111,9 @@ class ProfileEdit extends Component {
                 defaultValue={ description }
               />
             </div>
-          </div>
+          </article>
         </div>
-      </div>
+      </main>
     );
   }
 }

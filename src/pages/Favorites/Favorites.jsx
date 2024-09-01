@@ -23,7 +23,7 @@ class Favorites extends Component {
     const { FavoriteList } = this.state;
     const hasFavorite = FavoriteList.length > 0;
     return (
-      <div data-testid="page-favorites" className="mainFav">
+      <main data-testid="page-favorites" className="mainFav">
         <Header />
         <article className="articleFav">
           <section className="FavHeader">
@@ -46,7 +46,7 @@ class Favorites extends Component {
             </ul>
           </section>
         </article>
-      </div>
+      </main>
     );
   }
 }

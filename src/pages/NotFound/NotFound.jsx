@@ -5,12 +5,12 @@ import './NotFound.css';
 class NotFound extends Component {
   render() {
     return (
-      <div className="mainDivNF">
+      <main className="mainDivNF">
         <div className="imgNF">
-          <img src={ sadImage } alt="Desculpe, mas este caminho não existe. " />
+          <img src={ sadImage } alt="Desculpe, mas este caminho não existe." />
         </div>
         <div data-testid="page-not-found" className="divNF">NotFound</div>
-      </div>
+      </main>
     );
   }
 }
