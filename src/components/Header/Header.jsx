@@ -72,7 +72,7 @@ class Header extends Component {
           ) : (
             <div className="perfils">
               <div className="imgftHeader">
-                <img src={ image } alt="foto" />
+                <img src={ image } alt="" />
               </div>
               <p className="nameUserHeader">{nameUser}</p>
             </div>
