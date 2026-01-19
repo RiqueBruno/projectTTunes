@@ -1,6 +1,5 @@
 # 🎵 Project TTunes
 
-![Project Banner](https://via.placeholder.com/1200x400?text=TTunes+Preview)
 > Aplicação de streaming de música que simula a experiência do iTunes/Spotify, consumindo dados reais.
 
 [![Deploy](https://img.shields.io/badge/Acesse_o_App-Ver_Online-success?style=for-the-badge&logo=vercel)](https://project-t-tunes.vercel.app/)
